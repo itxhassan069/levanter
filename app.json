@@ -1,139 +1,98 @@
 {
-  "name": "levanter@5.2.3",
-  "description": "",
-  "keywords": ["noedjs"],
-  "success_url": "/",
-  "env": {
-    "ALWAYS_ONLINE": {
-      "description": "show bot number last seen as online",
-      "required": false,
-      "value": "false"
+    "name": "Bottius",
+    "description": "HASSN.",
+    "keywords": [
+        "Hassan",
+        "build"
+    ],
+    "stack": "container",
+    "env": {
+        "ASENA_SESSION": {
+            "description": "Enter whatsapp web session.",
+            "required": true
+        },
+        "SUDO": {
+            "description": "Sudo mode, Your number must be an international number. So you should have your number after the country code. Example: 919876543210 (IN)",
+            "required": false
+        },
+        "HANDLERS": {
+            "description": "enter prefix. Example . or ^[.,!/] for using multiple prefix like .,!/ or LyFE. Using keyword like LyFE will broke list and help command",
+            "required": true,
+            "value": "."
+        },
+        "SEND_READ": {
+            "description": "send read receipt.",
+            "required": false,
+            "value": "true"
+        },
+        "HEROKU": {
+            "description": "Enable heroku features",
+            "required": true,
+            "value": "true"
+        },
+        "HEROKU_API_KEY": {
+            "description": "Enter Heroku API Key.",
+            "required": true
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Enter Heroku APP Name.",
+            "required": true
+        },
+        "DEBUG": {
+            "description": "debug",
+            "required": false,
+            "value": "false"
+        },
+        "CLR_SESSION": {
+            "description": "Enter true to delete old session.",
+            "required": false,
+            "value": "false"
+        },
+        "NO_ONLINE": {
+            "description": "set true to hide online.",
+            "required": false,
+            "value": "true"
+        },
+        "WARN_COUNT": {
+            "description": "Maximum no of warns",
+            "required": false,
+            "value": "3"
+        },
+        "WARN_MSG": {
+            "description": "Message send while kicking.",
+            "required": false,
+            "value": "OK bie"
+        },
+        "REMOVEBG_KEY": {
+            "description": "key from remove.bg",
+            "required": false,
+            "value": "null"
+        },
+        "LANGUAGE": {
+            "description": "Enter bot language, example EN for English, ID for Bahasa Indonesia, TR for Turkish",
+            "value": "EN"
+        },
+        "STICKER_PACKNAME": {
+            "description": "Sticker pack name,author",
+            "value": "🥰,lyfe00011"
+        },
+        "DISABLE_BOT": {
+            "description": "Disable or Block bot in group/chat.Enter required chat jid separated by ,",
+            "value": "null"
+        },
+        "FIND_API_KEY": {
+            "description": "key from https://dashboard.audd.io/",
+            "value": "null"
+        }
     },
-    "LOG_MSG": {
-      "description": "Show whatsapp msgs in log",
-      "required": false,
-      "value": "false"
-    },
-    "SUDO": {
-      "description": "admin",
-      "required": false,
-      "value": ""
-    },
-    "PREFIX": {
-      "description": "prefix, check for more",
-      "required": false,
-      "value": "."
-    },
-    "SESSION_ID": {
-      "description": "session id",
-      "required": true,
-      "value": ""
-    },
-    "STICKER_PACKNAME": {
-      "description": "sticker pack info",
-      "required": false,
-      "value": "❤️,LyFE"
-    },
-    "HEROKU_APP_NAME": {
-      "description": "Heroku app name, same as above entered.",
-      "required": true
-    },
-    "HEROKU_API_KEY": {
-      "description": "Heroku account api key, https://dashboard.heroku.com/account",
-      "required": true
-    },
-    "RMBG_KEY": {
-      "description": "API key from remove.bg, required for plugin rmbg",
-      "required": false,
-      "value": "null"
-    },
-    "LANGUAG": {
-      "description": "Default Language for tts or trt",
-      "required": false,
-      "value": "en"
-    },
-    "WARN_LIMIT": {
-      "description": "Maximum number of wanings to a person.",
-      "required": false,
-      "value": "3"
-    },
-    "FORCE_LOGOUT": {
-      "description": "In Some scenario have to logout web, Only such case make this true and back to false after logout.",
-      "required": false,
-      "value": "false"
-    },
-    "DISABLE_BOT": {
-      "description": "Example : jid,jid,... where bot not works in both ways.",
-      "required": false,
-      "value": "null"
-    },
-    "ANTILINK_MSG": {
-      "description": "Message send when antilink and action is kick.",
-      "required": false,
-      "value": "_Antilink Detected &mention kicked_"
-    },
-    "ANTISPAM_MSG": {
-      "description": "Message send when antispam.",
-      "required": false,
-      "value": "_Antispam Detected &mention kicked_"
-    },
-    "ANTIWORDS_MSG": {
-      "description": "Message send when antiword.",
-      "required": false,
-      "value": "_Antiword Detected &mention kicked_"
-    },
-    "ANTIWORDS": {
-      "description": "words that not allowed in chats.",
-      "required": false,
-      "value": "word1,word2,word3"
-    },
-    "SS_TOKEN": {
-      "description": "token from https://app.screenshotapi.net/dashboard",
-      "required": false,
-      "value": ""
-    },
-    "REJECT_CALL": {
-      "description": "auto reject call, if set as true",
-      "required": false,
-      "value": "false"
-    },
-    "AUTO_STATUS_VIEW": {
-      "description": "view others status",
-      "required": false,
-      "value": "false"
-    },
-    "SEND_READ": {
-      "description": "send blue tick",
-      "required": false,
-      "value": "false"
-    },
-    "AJOIN": {
-      "description": "Accept Group join request(Group privacy)",
-      "required": false,
-      "value": "true"
-    },
-    "PERSONAL_MESSAGE": {
-      "description": "Send a Welcome message on personal chat",
-      "required": false,
-      "value": "null"
-    },
-    "DISABLE_START_MESSAGE": {
-      "description": "Disable start Message",
-      "required": false,
-      "value": "false"
-    }
-  },
-  "addons": [
-    {
-      "plan": "heroku-postgresql:basic"
-    }
-  ],
-
-  "buildpacks": [{ "url": "https://github.com/heroku/heroku-buildpack-nodejs#latest" }],
-  "formation": {
-    "web": {
-      "quantity": 1,
-      "size": "basic"
-    }
-  },
+    "addons": [
+        {
+            "plan": "heroku-postgresql"
+        }
+    ],
+    "buildpacks": [
+        {
+            "url": "heroku-community/apt"
+        }
+    ]
 }
